@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('getRaw') {
       steps {
-        sh 'sh "/home1/irteam/user/daily_login_statistics/hivequery.sh"'
+        sh 'python /home1/irteam/user/load.py'
       }
     }
     stage('parseRaw') {
